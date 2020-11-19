@@ -1,0 +1,43 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Created by AWS Lambda",
+    "version": "2018-08-27T15:22:56Z",
+    "title": "Webhook_toAWS"
+  },
+  "host": "xxxxxx.execute-api.us-east-1.amazonaws.com",
+  "basePath": "/prod",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/POST_alert": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            }
+          }
+        }
+      },
+      "x-amazon-apigateway-any-method": {
+        "responses": {
+          "200": {
+            "description": "200 response"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Empty": {
+      "type": "object",
+      "title": "Empty Schema"
+    }
+  }
+}
