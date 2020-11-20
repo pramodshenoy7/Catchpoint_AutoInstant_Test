@@ -64,6 +64,29 @@ The generated webhook URL looks something like this - https://hooks.slack.com/se
     + deploy API. API gateway will now be the trigger to execute Lambda function.
     + the generrated POST URL that looks like this - https://xxxxxxxxx.execute-api.us-east-1.amazonaws.com/Prod/POST_alert - will be used in the next step.
 
-##Work in progress
+**Step 4 - Catchpoint Setup part 2 - configure alert webhook**  
+Alert Webhook can be enabled in the Catchpoint portal under Settings -> API -> Alert Webhook
+Here are the items to configure:
++ Name: can be anything
++ URL: API Gateway POST URL from Step 3
++ Format: Template -> Add New -> Select JSON and add the JSON present in [`catchpoint/alert_webhook.json`](https://github.com/pramodshenoy7/Catchpoint_AutoInstant_Test/blob/main/catchpoint/alert_webhook.json)
++ Save the template
++ add an email address to notify in case webhook POSTing fails
++ Save the alert webhook
++ add the newly created webhook in Alert settings of tests of the type 'Web'
 
-## **Further improvement**
+**To test the integration** either
++ create a new Web test in Catchpoint that would fail and trigger the alert webhook
++ try the below JSON as a test event within your Lambda function
+
+> {
+  "testID": "253312",
+  "testURL": "http://www.google.com/404",
+  "nodeID": "762",
+  "nodeName": "Dallas, US -AT&T",
+  "monitor": "2"
+}
+
+## **Future improvement**
++ Currently, this project supports test of the type Catchpoint 'Web' only. Additional enhancements could be done to support other test types.
++ Alert ID can be added to flag the alert information pushed into Slack for easy search.
