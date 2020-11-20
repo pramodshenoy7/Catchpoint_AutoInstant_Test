@@ -24,13 +24,6 @@
             }
           }
         }
-      },
-      "x-amazon-apigateway-any-method": {
-        "responses": {
-          "200": {
-            "description": "200 response"
-          }
-        }
       }
     }
   },
