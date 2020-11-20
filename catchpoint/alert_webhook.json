@@ -1,0 +1,7 @@
+{
+  "testID": "${testId}",
+  "testURL": "${TestURL}",
+  "nodeID": "${NodeDetails('${nodeId}')}",
+  "nodeName": "${NodeDetails('${NodeName}')}",
+  "monitor": "${monitorTypeId}"
+}
