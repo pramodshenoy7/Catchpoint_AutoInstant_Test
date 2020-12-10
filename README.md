@@ -1,4 +1,4 @@
-# **Using AWS Lambda as a proxy to run onDemand instant tests on Catchpoint Alerts**
+# **Execute onDemand instant tests in Catchpoint on Catchpoint Alerts**
 
 An effective Digital Experience Monitoring (DEM) platform should help users detect, identify and escalate issues quickly which in turn **reduces the overall time to resolution**. As a Solutions Engineer at Catchpoint, I have been teaching customers how Catchpoint helps in achieving faster MTTR thus reducing downtime, SLA violations, poor customer experience and bounce rates.
 
